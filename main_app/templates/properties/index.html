@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Property List</h1>
+
+{% for p in properties %}
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ p.name }}</span>
+      <p>Address: {{ p.address }}</p>
+      <p>Description: {{ p.description }}</p>
+      <p>Value = {{p.value}}</p>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
