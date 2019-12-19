@@ -13,3 +13,7 @@ def about(request):
 def properties_index(request):
     properties = Property.objects.all()
     return render(request, 'properties/index.html', {'properties': properties})
+
+def properties_detail(request, p_id):
+    p = Property.objects.get(id = p_id)
+    return render(request, 'properties/detail.html', {'p': p})
